@@ -1,6 +1,6 @@
-package org.level1Exer1.Main;
+package org.level1Exer2.Main;
 
-import org.level1Exer1.Model.FolderList;
+import org.level1Exer2.Model.FolderList;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,6 +16,6 @@ public class Main {
 
 
 
-
     }
+
 }

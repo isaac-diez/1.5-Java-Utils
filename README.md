@@ -3,8 +3,8 @@
 ### English
 Task 1.5 about learning the use and implementation of Java Utils.
 
-- Level 1: [README.md](https://github.com/isaac-diez/1.5-Java-Utils/blob/master/src/Level1/README.md)
-- Level 2: [README.md](https://github.com/isaac-diez/1.5-Java-Utils/blob/master/src/Level2/README.md)
+- Level 1: [README.md](https://github.com/isaac-diez/1.5-Java-Utils/tree/master/src/Level1/java/org)
+- Level 2: [README.md](https://github.com/isaac-diez/1.5-Java-Utils/tree/master/src/Level2/java/org)
 
 💻**Stack used:**
 Project created with:

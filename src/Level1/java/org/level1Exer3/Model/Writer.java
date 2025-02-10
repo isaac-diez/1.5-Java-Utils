@@ -6,29 +6,21 @@ import java.util.ArrayList;
 
 public class Writer {
 
-    private FileWriter myWriter;
+        private final String filename;
 
-    public Writer(String filename) {
-        try {
-            this.myWriter = new FileWriter(filename, false);
-        } catch (IOException e) {
-            System.out.println("An error occurred: " + e.getMessage());
+        public Writer(String filename) {
+            this.filename = filename;
         }
-    }
 
-    public void writeToFile(ArrayList<String> tree ) {
-
-        try{
-            for (String item : tree){
-                this.myWriter.write(item + "\n");
+        public void writeToFile(ArrayList<String> tree) {
+            try (FileWriter myWriter = new FileWriter(filename, false)) {
+                for (String item : tree) {
+                    myWriter.write(item + "\n");
+                }
+                System.out.println("Successfully saved to file");
+            } catch (IOException e) {
+                System.out.println("An error occurred: " + e.getMessage());
             }
-            this.myWriter.close();
-            System.out.println("Successfully saved to file");
-        } catch (IOException e) {
-            System.out.println("An error occurred: " + e.getMessage());
-
         }
-
     }
 
-}

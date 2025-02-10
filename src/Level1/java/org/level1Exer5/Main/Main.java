@@ -16,12 +16,10 @@ public class Main {
             out.writeObject(person);
             System.out.println("Serialized object \""+person+"\" and saved to person.ser");
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-            // e.printStackTrace();
+        }   catch (Exception e) {
+                System.out.println("An error occurred: " + e.getMessage());
 
         }
-
 
         try (FileInputStream fileIn = new FileInputStream("person.ser");
         ObjectInputStream in = new ObjectInputStream(fileIn)) {
@@ -29,8 +27,7 @@ public class Main {
             System.out.println("Object deserialized: \"" + person + "\"");
 
     } catch (Exception e) {
-            throw new RuntimeException(e);
-            // e.printStackTrace();
+            System.out.println("An error occurred: " + e.getMessage());
         }
 
     }
